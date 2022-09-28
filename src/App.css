@@ -83,3 +83,6 @@ form button{
 .ql-snow .ql-editor h2{
  color: black;
 }
+.ql-toolbar.ql-snow{
+  text-align: left;
+}
