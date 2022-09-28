@@ -71,7 +71,7 @@ function App() {
         "Content-Type": "multipart/form-data",
       })
       .then((response) => {
-        if (response.status === 201) {
+        if (response.status === 200) {
           window.location.href = "/";
         }
       })
