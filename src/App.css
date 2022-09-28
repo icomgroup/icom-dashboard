@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@100;200;300;400;600;700&family=Karla:wght@200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;400;500;600;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+a {
+  text-decoration: none;
+  direction: ltr;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  margin: 0;
+  font-family: "Tajawal",sans-serif;
+}
+:root {
+  --primary-color: #EE1B5E;
+  --buttons-border-color: #EE1B5E;
+  --section-padding: 20px;
+  --title-size: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  padding-left: 6vw;
+  padding-right: 6vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+form{
+  display: flex;
+  flex-direction: column;
+ text-align: right;
+
+}
+.labels{
+  color: #777777;
+  font-size: 1em;
+    margin: 1em 0 4px;
+    font-weight: 700;
+}
+form input{
+  padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    background: #ebf4f8;
+    border: 1px solid #d5dee1;
+    transition: outline .2s ease;
+    outline: none;
+    font-family: inherit;
+    resize: none;
+    transition: 0.3s;
+}
+form input::placeholder{
+  color: #acacac;
+}
+form input:focus{
+  border: 2px solid #1587B2;
+}
+form button{
+  background-color: var(--primary-color);
+  margin-top: 20px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 18px;
+  font-family: "Tajawal", sans-serif;
+  cursor: pointer;
+}
+.ql-snow .ql-editor h2{
+ color: black;
 }
