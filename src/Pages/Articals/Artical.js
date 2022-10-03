@@ -57,13 +57,11 @@ export default function NewArtical() {
   const [sources, setsources] = useState("");
 
   const id = Number(window.location.pathname.split("/").slice(-1)[0]);
-  console.log(image);
 
   useEffect(() => {
     fetch(`https://icom-agency.com/api/articles/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setTitle(data[0].title);
         setdescription(data[0].description);
         setsummary(data[0].summary);
