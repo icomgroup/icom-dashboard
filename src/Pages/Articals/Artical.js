@@ -132,6 +132,7 @@ export default function NewArtical() {
             id="file"
             multiple
             onChange={(e) => setimage(e.target.files.item(0))}
+            value={image}
           />
           <label htmlFor="sources" className="labels">
             المصادر
