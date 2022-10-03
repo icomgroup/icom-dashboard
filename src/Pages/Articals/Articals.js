@@ -25,7 +25,7 @@ export default function Artical() {
       <h3>{item.title}</h3>
       <h5>{item.summary}</h5>
       <Link to={`/aritcal/${item.id}`}>
-        <button type="button" class="btn btn-secondary m-2">
+        <button type="button" class="btn btn-success m-2">
           تعديل المقالة
         </button>
       </Link>
