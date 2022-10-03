@@ -53,7 +53,7 @@ export default function NewArtical() {
   const [title, setTitle] = useState("");
   const [description, setdescription] = useState("");
   const [summary, setsummary] = useState("");
-  const [image, setimage] = useState("");
+  const [image, setimage] = useState();
   const [sources, setsources] = useState("");
 
   const id = Number(window.location.pathname.split("/").slice(-1)[0]);
@@ -71,6 +71,7 @@ export default function NewArtical() {
         setsources(data[0].sources);
       });
   }, []);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -132,7 +133,6 @@ export default function NewArtical() {
             id="file"
             multiple
             onChange={(e) => setimage(e.target.files.item(0))}
-            value={image}
           />
           <label htmlFor="sources" className="labels">
             المصادر
