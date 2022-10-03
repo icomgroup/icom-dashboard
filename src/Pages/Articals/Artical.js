@@ -81,7 +81,7 @@ export default function NewArtical() {
     formData.append("sources", sources);
 
     axios
-      .post(`https://icom-agency.com/api/articles/add`, formData, {
+      .post(`https://icom-agency.com/api/articles/add/${id}`, formData, {
         "Content-Type": "multipart/form-data",
       })
       .then((response) => {
