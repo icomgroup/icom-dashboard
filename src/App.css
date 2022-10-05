@@ -83,3 +83,11 @@ form button{
 .ql-toolbar.ql-snow{
   text-align: left;
 }
+@media(min-width: 768px){
+  .ql-toolbar{
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    width: 20%;
+  }
+}

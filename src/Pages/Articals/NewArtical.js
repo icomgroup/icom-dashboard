@@ -82,65 +82,68 @@ export default function NewArtical() {
   return (
     <div className="App">
       <Header />
-      <div className="container row " dir="rtl">
-        <form className="col-md-6" onSubmit={handleSubmit}>
-          <label htmlFor="name" className="labels">
-            عنوان المقالة
-          </label>
-          <input
-            type="text"
-            placeholder="ادخل عنوان المقالة"
-            onChange={(e) => setTitle(e.target.value)}
-            name="name"
-            id="name"
-            value={title}
-            required
-          />
-
-          <label htmlFor="summary" className="labels">
-            موجز المقالة
-          </label>
-          <input
-            type="text"
-            placeholder="ادخل موجز المقالة"
-            onChange={(e) => setsummary(e.target.value)}
-            name="summary"
-            id="summary"
-            value={summary}
-            required
-          />
-          <label htmlFor="file" className="labels">
-            صورة المقالة
-          </label>
-          <input
-            type="file"
-            id="file"
-            multiple
-            onChange={(e) => setimage(e.target.files.item(0))}
-          />
-          <label htmlFor="sources" className="labels">
-            المصادر
-          </label>
-          <textarea
-            type="text"
-            placeholder="ادخل بعض المصادر"
-            onChange={(e) => setsources(e.target.value)}
-            name="sources"
-            id="sources"
-            value={sources}
-            required
-            rows={5}
-          />
-          <div className="mt-3">
-            <ReactQuill
-              theme="snow"
-              modules={modules}
-              placeholder="Content goes here..."
-              onChange={setdescription}
+      <div className="container " dir="rtl">
+        <div className="row">
+          <form className="col-md-6" onSubmit={handleSubmit}>
+            <label htmlFor="name" className="labels">
+              عنوان المقالة
+            </label>
+            <input
+              type="text"
+              placeholder="ادخل عنوان المقالة"
+              onChange={(e) => setTitle(e.target.value)}
+              name="name"
+              id="name"
+              value={title}
+              required
             />
-          </div>
-          <button type="submit">ارسال</button>
-        </form>
+
+            <label htmlFor="summary" className="labels">
+              موجز المقالة
+            </label>
+            <input
+              type="text"
+              placeholder="ادخل موجز المقالة"
+              onChange={(e) => setsummary(e.target.value)}
+              name="summary"
+              id="summary"
+              value={summary}
+              required
+            />
+            <label htmlFor="file" className="labels">
+              صورة المقالة
+            </label>
+            <input
+              type="file"
+              id="file"
+              multiple
+              onChange={(e) => setimage(e.target.files.item(0))}
+            />
+            <label htmlFor="sources" className="labels">
+              المصادر
+            </label>
+            <textarea
+              type="text"
+              placeholder="ref..."
+              onChange={(e) => setsources(e.target.value)}
+              name="sources"
+              id="sources"
+              value={sources}
+              required
+              rows={5}
+              dir="ltr"
+            />
+            <div className="mt-3">
+              <ReactQuill
+                theme="snow"
+                modules={modules}
+                placeholder="Content goes here..."
+                onChange={setdescription}
+              />
+            </div>
+            <button type="submit">ارسال</button>
+          </form>
+        </div>
       </div>
     </div>
   );

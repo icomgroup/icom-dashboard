@@ -96,7 +96,7 @@ export default function NewArtical() {
   return (
     <div className="App">
       <Header />
-      <div className="container row " dir="rtl">
+      <div className="container row" dir="rtl">
         <form className="col-md-6" onSubmit={handleSubmit}>
           <label htmlFor="name" className="labels">
             عنوان المقالة
@@ -137,14 +137,16 @@ export default function NewArtical() {
           </label>
           <textarea
             type="text"
-            placeholder="ادخل بعض المصادر"
+            placeholder="ref"
             onChange={(e) => setsources(e.target.value)}
             name="sources"
             id="sources"
             value={sources}
             required
             rows={5}
+            dir="ltr"
           />
+
           <div className="mt-3">
             <ReactQuill
               theme="snow"
