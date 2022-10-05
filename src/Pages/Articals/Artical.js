@@ -135,7 +135,7 @@ export default function NewArtical() {
           <label htmlFor="sources" className="labels">
             المصادر
           </label>
-          <input
+          <textarea
             type="text"
             placeholder="ادخل بعض المصادر"
             onChange={(e) => setsources(e.target.value)}
@@ -143,6 +143,7 @@ export default function NewArtical() {
             id="sources"
             value={sources}
             required
+            rows={5}
           />
           <div className="mt-3">
             <ReactQuill
